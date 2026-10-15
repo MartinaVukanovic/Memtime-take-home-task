@@ -1,0 +1,36 @@
+{
+  "name": "memtime-api",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Memtime take-home API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node -r dotenv/config index.js",
+    "dev": "node --watch -r dotenv/config index.js",
+    "seed-database": "node -r dotenv/config scripts/SeedDatabase.js",
+    "test": "node --test --test-concurrency=1 tests",
+    "test:coverage": "node --test --test-concurrency=1 --experimental-test-coverage --test-coverage-include=src/**/*.js --test-coverage-include=scripts/**/*.js --test-coverage-lines=100 --test-coverage-functions=100 --test-coverage-branches=100 tests",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "cors": "2.8.6",
+    "dotenv": "16.6.1",
+    "express": "4.22.3",
+    "http-terminator": "3.2.0",
+    "ioredis": "5.11.1",
+    "joi": "17.13.8",
+    "lodash-es": "4.17.21",
+    "mongodb": "4.17.2",
+    "pino": "10.4.0",
+    "uuid": "11.1.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.1",
+    "eslint": "9.39.1",
+    "globals": "16.0.0",
+    "mongodb-memory-server": "10.4.3",
+    "supertest": "7.3.1"
+  }
+}

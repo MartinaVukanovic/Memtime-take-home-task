@@ -1,0 +1,30 @@
+/* Shared layout for centered dialogs (imported globally). */
+
+.modal-overlay,
+.text-modal-overlay {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+.modal,
+.text-modal {
+  display: flex;
+  flex-direction: column;
+  max-height: min(calc(100dvh - 48px), 920px);
+  margin: auto;
+  flex-shrink: 0;
+}
+
+.modal__header,
+.modal__footer,
+.text-modal__header {
+  flex-shrink: 0;
+}
+
+.modal__body,
+.text-modal__body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+}
